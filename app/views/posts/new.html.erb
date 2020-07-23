@@ -1,0 +1,9 @@
+<h2>New Post</h2>
+
+<%= form_for @post, html: { multipart: true } do |f| %>
+
+	<%= f.file_field :image %>
+	<%= f.hidden_field :image_cache %><br />
+	<%= f.submit "Save Post" %>
+
+<% end %>

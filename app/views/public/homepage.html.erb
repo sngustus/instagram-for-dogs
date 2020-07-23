@@ -1,0 +1,11 @@
+<h1>Welcome to My Insta-Clone</h1>
+
+<% if account_signed_in? %>
+  <h2>Landing Page<h2>
+
+<%else%>
+  <p>Please Register or Sign in to Continue</p>
+
+  <%= link_to "Sign Up", new_account_registration_path %> |
+  <%= link_to "Log In", new_account_session_path %>
+<%end%>
