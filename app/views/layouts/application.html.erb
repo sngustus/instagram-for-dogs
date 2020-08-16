@@ -5,30 +5,33 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <style>
+		a {color:LightGray}
+		img {width:50%; margin-left:auto; margin-right:auto; display:block}
+    </style>
   </head>
 
-  <body style="background-color:Gray">
-  <style>
-	a {color:DimGray}
-	p {color:White}
-	h1 {color:White}
-	h2 {color:White}
-	img {width:50%; margin-left:auto; margin-right:auto; display:block}
-  </style>
+  <body style="background-color:LightGray; margin:0px">
+
 	<% if account_signed_in? %>
-		<nav style="background-color:LightGray">
-			<%= link_to "News Feed", dashboard_path %> |
-			<%= link_to "New Post", new_post_path %> |
-			<a href="#" style="color:white">Profile</a> |
+		<nav style="display:flex; justify-content:space-between; background-color:#0e00ab; color:White; margin:0px; padding:15px">
+			<div id="nav-links">
+				<%= link_to "News Feed", dashboard_path %> |
+				<%= link_to "New Post", new_post_path %> |
+				<a href="#">Profile</a>
+			</div>
+			<input type="text" placeholder="Search..." style="width:30%">
 			<%= button_to "Sign Out", destroy_account_session_path, method: :delete, class: "signout" %>
 		</nav>
 	<% else %>
-		<nav>
-			<%= link_to "Home", "/" %> |
-			<%= link_to "Sign In", new_account_session_path %>
+		<nav style="display:flex; justify-content:space-between; background-color:#0e00ab; color:White; margin:0px; padding:15px">
+			<%= link_to "Home", "/" %>
+			<%= button_to "Sign In", new_account_session_path %>
 		</nav>
 	<% end %>
 
-    <%= yield %>
+	<div id="content-wrapper" style="padding-left:50px; padding-right:50px; display:flex; justify-content:space-between">
+      <%= yield %>
+	</div>
   </body>
 </html>

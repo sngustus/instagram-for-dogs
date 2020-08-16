@@ -1,8 +1,19 @@
-<h2>Your Feed</h2>
-
-<% @posts.each do |p| %>
-	<div>
-		<h4><%= p.account.username %></h4>
-		<%= image_tag p.image.url %>
+<div style="width:15%">
+	<h1>Pages</h1>
+</div>
+<div style="width:50%; justify-content:space-between">
+	<h1>Your Feed</h1>
+	<% @posts.each do |p| %>
+	<div style="background-color:white; padding:10px; margin-bottom:50px; box-shadow: 5px 10px #888888">
+		<div style="width:95%; margin-left:auto; margin-right:auto; margin-bottom:50px">
+			<h4>
+				<%= p.account.username %>
+			</h4>
+			<%= image_tag p.image.url %>
+		</div>
 	</div>
-<% end %>
+	<% end %>
+</div>
+<div style="width: 15%">
+	<h1>Stories</h1>
+</div>
