@@ -6,22 +6,28 @@
     <%= csp_meta_tag %>
 
     <style>
-		a {color:LightGray}
-		img {width:50%; margin-left:auto; margin-right:auto; display:block}
+		a {color:#ebe9e4}
+		img {width: 100%; margin-left:auto; margin-right:auto; display:block}
     </style>
+
+	<script type="text/javascript">
+
+	</script>
   </head>
 
-  <body style="background-color:LightGray; margin:0px">
+  <body style="background-color:#ebe9e4; margin:0px">
 
 	<% if account_signed_in? %>
 		<nav style="display:flex; justify-content:space-between; background-color:#0e00ab; color:White; margin:0px; padding:15px">
-			<div id="nav-links">
+			<div id="nav-links" style="width:20%">
 				<%= link_to "News Feed", dashboard_path %> |
 				<%= link_to "New Post", new_post_path %> |
 				<a href="#">Profile</a>
 			</div>
-			<input type="text" placeholder="Search..." style="width:30%">
-			<%= button_to "Sign Out", destroy_account_session_path, method: :delete, class: "signout" %>
+			<input id="searchbar" type="text" placeholder="Search..." style="width:50%; border-radius:10px; padding-left:10px">
+			<div style="width:20%; display:flex; justify-content:flex-end">
+				<%= button_to "Sign Out", destroy_account_session_path, method: :delete, class: "signout" %>
+			</div>
 		</nav>
 	<% else %>
 		<nav style="display:flex; justify-content:space-between; background-color:#0e00ab; color:White; margin:0px; padding:15px">
