@@ -25,3 +25,9 @@ test:
 production:
   <<: *default
   database: db/production
+  adapter: postgresql
+  host: ec2-3-215-207-12.compute-1.amazonaws.com
+  username: untvykpfrfhjqf
+  password: c8df021e37ee4e195952df6cea0af9f9f8b1818f5ecba08e234f1a72d17c493c
+  URI: postgres://untvykpfrfhjqf:c8df021e37ee4e195952df6cea0af9f9f8b1818f5ecba08e234f1a72d17c493c@ec2-3-215-207-12.compute-1.amazonaws.com:5432/dvfh53s35u859
+  port: 5432
