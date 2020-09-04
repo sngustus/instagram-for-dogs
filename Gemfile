@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 #gems specific to this tutorial
-gem 'devise', '3.0.3' #auth
+gem 'devise', '4.7.2' #auth
 gem 'carrierwave' #file uploads
 #gem 'fog' #use carrierwave with Amazon S3
 gem 'mini_magick' #image resizing
